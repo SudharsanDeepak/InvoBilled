@@ -36,7 +36,6 @@ function Dashboard() {
   };
 
   const handleCreateNew = () => {
-    // Reset to initial state from context if needed
     setInvoiceTitle("Create Invoice");
     setSelectedTemplate("template1");
     setInvoiceData(initialInvoiceData);

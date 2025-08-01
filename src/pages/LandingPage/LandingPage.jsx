@@ -11,18 +11,6 @@ const LandingPage = () => {
     const navigate = useNavigate();
     const {openSignIn} = useClerk();
     const {setInvoiceData, setSelectedTemplate, setInvoiceTitle} = useContext(AppContext);
-    // useEffect(() => {
-    //     // Get all elements with data-bs-toggle="tooltip"
-    //     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    //     // Initialize a new Bootstrap tooltip for each trigger element
-    //     tooltipTriggerList.map(function (tooltipTriggerEl) {
-    //         // Ensure window.bootstrap is available
-    //         if (window.bootstrap && typeof window.bootstrap.Tooltip === 'function') {
-    //             return new window.bootstrap.Tooltip(tooltipTriggerEl);
-    //         }
-    //         return null;
-    //     });
-    // }, []); // Empty dependency array means this effect runs only once on mount
 
     const handleActionButton = () => {
         if (user) {
@@ -37,7 +25,6 @@ const LandingPage = () => {
 
     return (
         <>
-            {/* Hero Section: Full-width, centered text with background image */}
             <header id="hero" className="hero-section text-white text-center">
                 <div className="container py-5 d-flex flex-column justify-content-center" style={{ minHeight: '85vh' }}>
                     <div className="row py-lg-5">
@@ -46,14 +33,12 @@ const LandingPage = () => {
                                 Effortless Invoicing. Professional Results.
                             </h1>
                             <p className="lead mb-5" style={{ fontSize: '1.3rem' }}>
-                                Stop wrestling with spreadsheets. QuickInvoice helps you create and send beautiful invoices in minutes, so you get paid faster.
+                                Stop wrestling with spreadsheets. InvoBilled helps you create and send beautiful invoices in minutes, so you get paid faster.
                             </p>
                             <p>
-                                {/* Primary call to action */}
                                 <button onClick={handleActionButton} className="btn btn-lg btn-warning fw-bold rounded-pill my-2 mx-1 px-5 py-3">
                                     Generate Your First Invoice
                                 </button>
-                                {/* Secondary call to action */}
                                 <a href="#how-it-works" className="btn btn-lg btn-outline-light rounded-pill my-2 mx-1 px-5 py-3">
                                     Learn More
                                 </a>
@@ -63,12 +48,11 @@ const LandingPage = () => {
                 </div>
             </header>
 
-            {/* How It Works Section: Explains the process in steps using cards */}
             <section id="how-it-works" className="py-5 bg-light">
                 <div className="container">
                     <h2 className="text-center mb-5 display-5 fw-bold">Get Started in 4 Simple Steps</h2>
                     <div className="row g-4 justify-content-center">
-                        {/* Step 1 Card */}
+
                         <div className="col-md-6 col-lg-3 d-flex">
                             <div className="card h-100 shadow-sm border-0 text-center flex-fill">
                                 <div className="card-img-top-container d-flex align-items-center justify-content-center p-4 bg-primary-soft">
@@ -88,7 +72,6 @@ const LandingPage = () => {
                             </div>
                         </div>
 
-                        {/* Step 2 Card */}
                         <div className="col-md-6 col-lg-3 d-flex">
                             <div className="card h-100 shadow-sm border-0 text-center flex-fill">
                                 <div className="card-img-top-container d-flex align-items-center justify-content-center p-4 bg-success-soft">
@@ -108,7 +91,6 @@ const LandingPage = () => {
                             </div>
                         </div>
 
-                        {/* Step 3 Card */}
                         <div className="col-md-6 col-lg-3 d-flex">
                             <div className="card h-100 shadow-sm border-0 text-center flex-fill">
                                 <div className="card-img-top-container d-flex align-items-center justify-content-center p-4 bg-warning-soft">
@@ -128,7 +110,6 @@ const LandingPage = () => {
                             </div>
                         </div>
 
-                        {/* Step 4 Card */}
                         <div className="col-md-6 col-lg-3 d-flex">
                             <div className="card h-100 shadow-sm border-0 text-center flex-fill">
                                 <div className="card-img-top-container d-flex align-items-center justify-content-center p-4 bg-info-soft">
@@ -154,7 +135,7 @@ const LandingPage = () => {
             {/* Features Section: Highlights key benefits with images and text */}
             <section id="features" className="py-5">
                 <div className="container">
-                    <h2 className="text-center mb-5 display-5 fw-bold">Why Choose QuickInvoice?</h2>
+                    <h2 className="text-center mb-5 display-5 fw-bold">Why Choose InvoBilled?</h2>
                     {/* Feature 1 */}
                     <div className="row align-items-center gy-4">
                         <div className="col-md-6">
@@ -168,7 +149,7 @@ const LandingPage = () => {
                         <div className="col-md-6">
                             <h3 className="fw-bold mx-2">Easy to fill invoice details</h3>
                             <p className="text-muted lead fs-6 mx-2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                In Our InvoBilled Application, You Can Easily Fill Invoice Details with a User-Friendly Interface.
                             </p>
                             <ul className="list-unstyled text-muted">
                                 <li className="mb-2"><i className="bi bi-check-circle-fill text-primary me-2"></i>Curated list of templates from gallery.</li>
@@ -190,7 +171,7 @@ const LandingPage = () => {
                         <div className="col-md-6">
                             <h3 className="fw-bold mx-2">Beautiful Dashboard</h3>
                             <p className="text-muted lead fs-6 mx-2">
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                In this Application many beautiful features are available to make your invoicing experience smooth and efficient.
                             </p>
                             <ul className="list-unstyled text-muted">
                                 <li className="mb-2"><i className="bi bi-check-circle-fill text-primary me-2"></i>View the previous invoices.</li>
@@ -214,7 +195,7 @@ const LandingPage = () => {
                         <div className="col-md-6">
                             <h3 className="fw-bold mx-2">Invoice Preview with Action Buttons</h3>
                             <p className="text-muted lead fs-6 mx-2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                In Our InvoBilled Application, You Can Easily Preview Your Invoice with Action Buttons to Save, Download, and Delete.
                             </p>
                             <ul className="list-unstyled text-muted">
                                 <li className="mb-2"><i className="bi bi-check-circle-fill text-primary me-2"></i>Live preview.</li>
@@ -236,7 +217,7 @@ const LandingPage = () => {
                         <div className="col-md-6">
                             <h3 className="fw-bold mx-2">Send invoices instantly</h3>
                             <p className="text-muted lead fs-6 mx-2">
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                In Our InvoBilled Application, You Can Easily Send Invoices Instantly Without Leaving the Application.
                             </p>
                             <ul className="list-unstyled text-muted">
                                 <li className="mb-2"><i className="bi bi-check-circle-fill text-primary me-2"></i>Send invoices instantly without leaving the application.</li>
@@ -254,7 +235,7 @@ const LandingPage = () => {
                 <div className="container">
                     <h2 className="display-5 fw-bold mb-3">Ready to Streamline Your Invoicing?</h2>
                     <p className="lead mb-4 mx-auto" style={{ maxWidth: '600px' }}>
-                        Join thousands of freelancers and small businesses who trust QuickInvoice.
+                        Join thousands of freelancers and small businesses who trust InvoBilled.
                         Start creating professional invoices today – its fast, easy, and effective!
                     </p>
                     <button className="btn btn-lg btn-warning fw-bold rounded-pill px-5 py-3" onClick={handleActionButton}>
@@ -270,12 +251,12 @@ const LandingPage = () => {
             <footer className="py-5 bg-dark text-white-50">
                 <div className="container text-center">
                     <Logo />
-                    <p className="text-white fw-bold mt-2">QuickInvoice</p>
+                    <p className="text-white fw-bold mt-2">InvoBilled</p>
                     <p className="mb-0">
-                        &copy; {new Date().getFullYear()} QuickInvoice. All Rights Reserved.
+                        &copy; {new Date().getFullYear()} InvoBilled. Pass your Bill for your Spend!.
                     </p>
-                    <p className="mb-0 small">
-                        Crafted with <i className="bi bi-heart-fill text-danger"></i> for freelancers and small businesses.
+                    <p className="mb-0">
+                        Made with <i className="bi bi-heart-fill text-danger"></i> by Sudharsan Deepak S
                     </p>
                     <p className="mt-2">
                         {/* Placeholder social media links */}

@@ -37,7 +37,7 @@ const Menubar = () => {
             className="fw-bolder fs-4 mx-3"
             style={{ letterSpacing: "-0.5px", color: "#0D6EFDB2" }}
           >
-            QuickInvoice
+            InvoBilled
           </span>
         </Link>
         {/* Navbar toggler for smaller screens */}

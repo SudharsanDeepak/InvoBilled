@@ -119,12 +119,11 @@ const PreviewPage = () => {
     try {
       setEmailing(true);
 
-      // Generate the PDF blob
       const pdfBlob = await generatePdfFromElement(
         previewRef.current,
         `invoice_${Date.now()}.pdf`,
         true
-      ); // add `returnBlob=true` in your utils
+      ); 
 
       const formData = new FormData();
       formData.append("file", pdfBlob, `invoice_${Date.now()}.pdf`);
