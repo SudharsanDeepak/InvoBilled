@@ -81,16 +81,23 @@ const Template1 = ({ data }) => {
               </tr>
             </thead>
             <tbody>
-              {data.items.map((item, index) => (
-                <tr key={index}>
-                  <td className="p-2">{item.name}</td>
-                  <td className="p-2 text-center">{item.qty}</td>
-                  <td className="p-2 text-end">₹{item.amount?.toFixed(2)}</td>
-                  <td className="p-2 text-end">
-                    ₹{(item.qty * item.amount).toFixed(2)}
-                  </td>
-                </tr>
-              ))}
+              {data.items.map((item, index) => {
+                // Safely convert amount to number, default to 0 if invalid
+                const amount = Number(item.amount) || 0;
+                const qty = Number(item.qty) || 0;
+                const total = amount * qty;
+                
+                return (
+                  <tr key={index}>
+                    <td className="p-2">{item.name || 'Untitled Item'}</td>
+                    <td className="p-2 text-center">{qty}</td>
+                    <td className="p-2 text-end">₹{amount.toFixed(2)}</td>
+                    <td className="p-2 text-end">
+                      ₹{total.toFixed(2)}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
